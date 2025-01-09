@@ -4,8 +4,8 @@ import Loading from "./Pages/Loading";
 function App() {
   return (
     <div className="bg-black overflow-hidden">
-      {/* <PleaseDont /> */}
-      <Home/>
+      <PleaseDont />
+      {/* <Home/> */}
       {/* <Loading/> */}
     </div>
     
