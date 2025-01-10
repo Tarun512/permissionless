@@ -13,7 +13,7 @@ function Loading() {
           return prevCount + 1;
         }else{
           clearInterval(interval); 
-          setDisplay(false);
+          setDisplay(true);
           return prevCount;
         }
       })

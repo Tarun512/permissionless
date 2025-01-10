@@ -109,71 +109,140 @@ function Home() {
             x: "-60vw",
             delay: 0.5,
         })
-        // t2.from('.paint_first',{
-        //     opacity: 0,
-        //     scale: 1,
-        //     x: "-50vw",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: 0.1,
-        // })
-        // t2.to('.paint_second',{
-        //     scale: 1,
-        //     x: "100%",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: -0.2,
-        // })
-        // t2.from('.paint_seconddiv',{
-        //     opacity: 0,
-        //     scale: 1,
-        //     x: "-50vw",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: 0.6,
-        // })
-        // t2.to('.paint_second',{
-        //     scale: 1,
-        //     x: "100%",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: -0.2,
-        // })
-        // t2.from('.paint_third',{
-        //     opacity: 0,
-        //     scale: 1,
-        //     x: "-50vw",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: 0.7,
-        // })
-        
-        // t2.to('.paint_second',{
-        //     scale: 1,
-        //     x: "100%",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: -0.2,
-        // })
-        // t2.from('.paint_fourth',{
-        //     opacity: 0,
-        //     scale: 1,
-        //     x: "-50vw",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: 0.8,
-        // })
-        // t2.to('.paint_second',{
-        //     scale: 1,
-        //     x: "100%",        
-        //     duration: 1.5,    
-        //     ease: "power2.out",
-        //     delay: -0.2,
-        // })
-        
-        
+        t2
+        .to({},{duration: 1})
+        .from('.div1',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .from('.div2',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .from('.div3',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,   
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .from('.div4',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        // div2
+        t2
+        .to({},{duration: 1})
+        .to('.div1_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .to('.div2_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .to('.div3_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            delay: 0.2,
+        }, "-=0.9")
+        .to('.div4_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            delay: 0.2,
+        }, "-=0.9")
         
     })
+    // third part second half
+    // useGSAP(()=>{
+    //     const t2 = gsap.timeline();
+    //     t2.from('.div1',{
+    //         opacity: 0,
+    //         scale: 1,
+    //         x: "-50vw",        
+    //         duration: 1.5,    
+    //         ease: "power2.out",
+            
+    //     },"+=0.1")
+    //     .from('.div2',{
+    //         opacity: 0,
+    //         scale: 1,
+    //         x: "-50vw",        
+    //         duration: 1.5,    
+    //         ease: "power2.out",
+            
+    //     },"+=0.1")
+    //     .from('.div3',{
+    //         opacity: 0,
+    //         scale: 1,
+    //         x: "-50vw",        
+    //         duration: 1.5,    
+    //         ease: "power2.out",
+            
+    //     },"+=0.1")
+    //     .from('.div4',{
+    //         opacity: 0,
+    //         scale: 1,
+    //         x: "-50vw",        
+    //         duration: 1.5,    
+    //         ease: "power2.out",
+            
+    //     },"+=0.1")
+    //     // div2
+    //     t2
+        
+    //     .to('.div1_paint',{
+    //         scale: 1,
+    //         x: "100%",        
+    //         duration: 1,    
+    //         ease: "power2.out",
+            
+    //     })
+    //     .to('.div2_paint',{
+    //         scale: 1,
+    //         x: "100%",        
+    //         duration: 1,    
+    //         ease: "power2.out",
+            
+    //     })
+    //     .to('.div3_paint',{
+    //         scale: 1,
+    //         x: "100%",        
+    //         duration: 1,    
+    //         ease: "power2.out",
+    //         delay: 0.2,
+    //     })
+    //     .to('.div4_paint',{
+    //         scale: 1,
+    //         x: "100%",        
+    //         duration: 1,    
+    //         ease: "power2.out",
+    //         delay: 0.2,
+    //     })
+    // })
     useGSAP(()=>{
         const tl2 = gsap.timeline({
             scrollTrigger: {
@@ -382,20 +451,20 @@ function Home() {
                     <img src="/team01.webp" alt="team image" />
                 </div>
                 <div className='flex flex-col md:w-[40%] h-full w-full justify-between'>
-                    <div className='w-full  relative h-full paint_first  z-40'>
-                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute paint_second'></div>
+                    <div className='w-full  relative h-full div1  z-40'>
+                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute div1_paint'></div>
                         <h2 className='relative text-white  text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
                     </div>
-                    <div className='w-full  relative h-full paint_seconddiv'>
-                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute paint_second'></div>
+                    <div className='w-full  relative h-full div2'>
+                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute div2_paint'></div>
                         <h2 className='text-white text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
                     </div>
-                    <div className='w-full  relative h-full paint_third'>
-                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute paint_second'></div>
+                    <div className='w-full  relative h-full div3'>
+                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute div3_paint'></div>
                         <h2 className='text-white text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
                     </div>
-                    <div className='w-full  relative h-full paint_fourth'>
-                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute paint_second'></div>
+                    <div className='w-full  relative h-full div4'>
+                        <div className='w-full h-[15vw] md:h-[8vw] z-20 bg-custom_green absolute div4_paint'></div>
                         <h2 className='text-white text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
                     </div>
                 </div>
