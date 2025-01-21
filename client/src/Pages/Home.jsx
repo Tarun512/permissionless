@@ -28,356 +28,356 @@ function Home() {
 
     window.addEventListener('scroll',handleScroll);
     // first section
-    // useGSAP(()=>{
+    useGSAP(()=>{
         
-    //     gsap.from('.first',{
+        gsap.from('.first',{
             
-    //         y:"100vh",
-    //         delay: 1,
-    //         ease: 'poweri.out'
-    //     })
-    //     gsap.from('.making',{
-    //         scale: 0,
-    //         duration: 0.5,
-    //         delay: 2
-    //     })
-    //     gsap.from('.opportunities',{
-    //         scale: 1.2,
-    //         duration: 0.5,
-    //         delay: 1.5
-    //     })
-    //     gsap.from('.logo',{
-    //         scale: 0,
-    //         duration: 0.5,
-    //         delay: 1.5
-    //     })
-    //     const img = document.querySelector("img.logo");
-    //     img.onload = () => {
-    //         const len = img.offsetHeight / 2;
-    //         gsap.from('.drop', {
-    //             opacity: 0,
-    //             y: -len,
-    //             duration: 2,
-    //             delay: 3
-    //         });
-    //     };
-    // });
-    // // second section
-    // useGSAP(()=>{
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".second",
-    //             start:'top 85%',
-    //             end: 'top 75%',
-    //             toggleActions: "play none none none",
-    //             once: true,
-    //         }
-    //     });
-    //     tl.from('.second',{
-    //         opacity: 0,
-    //         y: "20vh",
-    //         delay: 0.5,
-    //         ease: "poweri.out",
-    //     })
-    //     tl.from('.text',{
-    //         y: "30vh",
-    //         opacity: 0,
-    //         delay: 2,
-    //         ease: "poweri.out"
-    //     })
-    //     // 
-    // })
-    // // third section
-    // useGSAP(()=>{
-    //     const t2 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".third",
-    //             start:'top 85%',
-    //             end: 'top 75%',
-    //             toggleActions: "play none none none",
+            y:"100vh",
+            delay: 1,
+            ease: 'poweri.out'
+        })
+        gsap.from('.making',{
+            scale: 0,
+            duration: 0.5,
+            delay: 2
+        })
+        gsap.from('.opportunities',{
+            scale: 1.2,
+            duration: 0.5,
+            delay: 1.5
+        })
+        gsap.from('.logo',{
+            scale: 0,
+            duration: 0.5,
+            delay: 1.5
+        })
+        const img = document.querySelector("img.logo");
+        img.onload = () => {
+            const len = img.offsetHeight / 2;
+            gsap.from('.drop', {
+                opacity: 0,
+                y: -len,
+                duration: 2,
+                delay: 3
+            });
+        };
+    });
+    // second section
+    useGSAP(()=>{
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".second",
+                start:'top 85%',
+                end: 'top 75%',
+                toggleActions: "play none none none",
+                once: true,
+            }
+        });
+        tl.from('.second',{
+            opacity: 0,
+            y: "20vh",
+            delay: 0.5,
+            ease: "poweri.out",
+        })
+        tl.from('.text',{
+            y: "30vh",
+            opacity: 0,
+            delay: 2,
+            ease: "poweri.out"
+        })
+        // 
+    })
+    // third section
+    useGSAP(()=>{
+        const t2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".third",
+                start:'top 85%',
+                end: 'top 75%',
+                toggleActions: "play none none none",
                 
-    //         }
-    //     });
-    //     t2.from('.third',{
-    //         opacity: 0,
-    //         y: "15vh",
-    //         delay: 0.5,
-    //         ease: "poweri.out",
-    //     })
-    //     t2.from('.team_image',{
-    //         opacity: 0,
-    //         x: "-60vw",
-    //         delay: 0.5,
-    //     })
-    //     t2
-    //     .to({},{duration: 1})
-    //     .from('.div1',{
+            }
+        });
+        t2.from('.third',{
+            opacity: 0,
+            y: "15vh",
+            delay: 0.5,
+            ease: "poweri.out",
+        })
+        t2.from('.team_image',{
+            opacity: 0,
+            x: "-60vw",
+            delay: 0.5,
+        })
+        t2
+        .to({},{duration: 1})
+        .from('.div1',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .from('.div2',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .from('.div3',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,   
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .from('.div4',{
+            opacity: 0,
+            scale: 1,
+            x: "-50vw",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        // div2
+        t2
+        .to({},{duration: 1})
+        .to('.div1_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .to('.div2_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            
+        }, "-=0.9")
+        .to('.div3_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            delay: 0.2,
+        }, "-=0.9")
+        .to('.div4_paint',{
+            scale: 1,
+            x: "100%",        
+            duration: 1,    
+            ease: "power2.out",
+            delay: 0.2,
+        }, "-=0.9")
+        
+    })
+    // third part second half
+    // useGSAP(()=>{
+    //     const t2 = gsap.timeline();
+    //     t2.from('.div1',{
     //         opacity: 0,
     //         scale: 1,
     //         x: "-50vw",        
-    //         duration: 1,    
+    //         duration: 1.5,    
     //         ease: "power2.out",
             
-    //     }, "-=0.9")
+    //     },"+=0.1")
     //     .from('.div2',{
     //         opacity: 0,
     //         scale: 1,
     //         x: "-50vw",        
-    //         duration: 1,    
+    //         duration: 1.5,    
     //         ease: "power2.out",
             
-    //     }, "-=0.9")
+    //     },"+=0.1")
     //     .from('.div3',{
     //         opacity: 0,
     //         scale: 1,
     //         x: "-50vw",        
-    //         duration: 1,   
+    //         duration: 1.5,    
     //         ease: "power2.out",
             
-    //     }, "-=0.9")
+    //     },"+=0.1")
     //     .from('.div4',{
     //         opacity: 0,
     //         scale: 1,
     //         x: "-50vw",        
-    //         duration: 1,    
+    //         duration: 1.5,    
     //         ease: "power2.out",
             
-    //     }, "-=0.9")
+    //     },"+=0.1")
     //     // div2
     //     t2
-    //     .to({},{duration: 1})
+        
     //     .to('.div1_paint',{
     //         scale: 1,
     //         x: "100%",        
     //         duration: 1,    
     //         ease: "power2.out",
             
-    //     }, "-=0.9")
+    //     })
     //     .to('.div2_paint',{
     //         scale: 1,
     //         x: "100%",        
     //         duration: 1,    
     //         ease: "power2.out",
             
-    //     }, "-=0.9")
+    //     })
     //     .to('.div3_paint',{
     //         scale: 1,
     //         x: "100%",        
     //         duration: 1,    
     //         ease: "power2.out",
     //         delay: 0.2,
-    //     }, "-=0.9")
+    //     })
     //     .to('.div4_paint',{
     //         scale: 1,
     //         x: "100%",        
     //         duration: 1,    
     //         ease: "power2.out",
     //         delay: 0.2,
-    //     }, "-=0.9")
-        
+    //     })
     // })
-    // // third part second half
-    // // useGSAP(()=>{
-    // //     const t2 = gsap.timeline();
-    // //     t2.from('.div1',{
-    // //         opacity: 0,
-    // //         scale: 1,
-    // //         x: "-50vw",        
-    // //         duration: 1.5,    
-    // //         ease: "power2.out",
+    useGSAP(()=>{
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".first_para",
+                start:'top 85%',
+                end: 'top 75%',
+                toggleActions: "play none none none",
+                markers: true,
+            },
             
-    // //     },"+=0.1")
-    // //     .from('.div2',{
-    // //         opacity: 0,
-    // //         scale: 1,
-    // //         x: "-50vw",        
-    // //         duration: 1.5,    
-    // //         ease: "power2.out",
+        });
+        tl2.from('.first_para',{
+            opacity: 0,
+            y: "10vh",
+        })
+        const tl3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".second_para",
+                start:'top 85%',
+                end: 'top 75%',
+                toggleActions: "play none none none",
+                markers: true,
+            },
             
-    // //     },"+=0.1")
-    // //     .from('.div3',{
-    // //         opacity: 0,
-    // //         scale: 1,
-    // //         x: "-50vw",        
-    // //         duration: 1.5,    
-    // //         ease: "power2.out",
-            
-    // //     },"+=0.1")
-    // //     .from('.div4',{
-    // //         opacity: 0,
-    // //         scale: 1,
-    // //         x: "-50vw",        
-    // //         duration: 1.5,    
-    // //         ease: "power2.out",
-            
-    // //     },"+=0.1")
-    // //     // div2
-    // //     t2
+        });
+        tl3.from('.second_para',{
+            opacity: 0,
+            y: "10vh",
+        })
         
-    // //     .to('.div1_paint',{
-    // //         scale: 1,
-    // //         x: "100%",        
-    // //         duration: 1,    
-    // //         ease: "power2.out",
-            
-    // //     })
-    // //     .to('.div2_paint',{
-    // //         scale: 1,
-    // //         x: "100%",        
-    // //         duration: 1,    
-    // //         ease: "power2.out",
-            
-    // //     })
-    // //     .to('.div3_paint',{
-    // //         scale: 1,
-    // //         x: "100%",        
-    // //         duration: 1,    
-    // //         ease: "power2.out",
-    // //         delay: 0.2,
-    // //     })
-    // //     .to('.div4_paint',{
-    // //         scale: 1,
-    // //         x: "100%",        
-    // //         duration: 1,    
-    // //         ease: "power2.out",
-    // //         delay: 0.2,
-    // //     })
-    // // })
-    // useGSAP(()=>{
-    //     const tl2 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".first_para",
-    //             start:'top 85%',
-    //             end: 'top 75%',
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         },
-            
-    //     });
-    //     tl2.from('.first_para',{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
-    //     const tl3 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".second_para",
-    //             start:'top 85%',
-    //             end: 'top 75%',
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         },
-            
-    //     });
-    //     tl3.from('.second_para',{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
+    })
+    useGSAP(()=>{
+        const tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".doing",
+                start: "top 85%",
+                end: "top 75%",
+                toggleActions: "play none none none",
+                markers: true,
+            }
+        })
+        tl1.from(".doing",{
+            opacity: 0,
+            y: "10vh",
+        })
         
-    // })
-    // useGSAP(()=>{
-    //     const tl1 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".doing",
-    //             start: "top 85%",
-    //             end: "top 75%",
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         }
-    //     })
-    //     tl1.from(".doing",{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
-        
-    //     const tl1b = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".space",
-    //             start: "top 85%",
-    //             end: "top 75%",
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         }
-    //     })
-    //     tl1b.from(".space",{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
-    //     const tl2 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".sites",
-    //             start: "top 85%",
-    //             end: "top 75%",
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         }
-    //     })
-    //     tl2.from(".sites",{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
+        const tl1b = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".space",
+                start: "top 85%",
+                end: "top 75%",
+                toggleActions: "play none none none",
+                markers: true,
+            }
+        })
+        tl1b.from(".space",{
+            opacity: 0,
+            y: "10vh",
+        })
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".sites",
+                start: "top 85%",
+                end: "top 75%",
+                toggleActions: "play none none none",
+                markers: true,
+            }
+        })
+        tl2.from(".sites",{
+            opacity: 0,
+            y: "10vh",
+        })
 
-    // })
-    // useGSAP(()=>{
-    //     const tl1 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".jacket",
-    //             start: "top 85%",
-    //             end: "top 75%",
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         }
-    //     })
-    //     tl1.from(".jacket",{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
-    //     document.querySelectorAll('.social').forEach((social, index) => {
-    //         gsap.from(social, {
-    //             scrollTrigger: {
-    //                 trigger: social,
-    //                 start: 'top 85%',
-    //                 end: 'top 75%', 
-    //                 toggleActions: "play none none none", 
-    //                 markers: true,
-    //             },
-    //             y: '10vh',
-    //             opacity: 0,
-    //             duration: 1,
-    //             ease: 'power1.out',
-    //             delay: index * 0.2,
-    //         });
-    //     });
+    })
+    useGSAP(()=>{
+        const tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".jacket",
+                start: "top 85%",
+                end: "top 75%",
+                toggleActions: "play none none none",
+                markers: true,
+            }
+        })
+        tl1.from(".jacket",{
+            opacity: 0,
+            y: "10vh",
+        })
+        document.querySelectorAll('.social').forEach((social, index) => {
+            gsap.from(social, {
+                scrollTrigger: {
+                    trigger: social,
+                    start: 'top 85%',
+                    end: 'top 75%', 
+                    toggleActions: "play none none none", 
+                    markers: true,
+                },
+                y: '10vh',
+                opacity: 0,
+                duration: 1,
+                ease: 'power1.out',
+                delay: index * 0.2,
+            });
+        });
 
-    // })
-    // // last section
-    // useGSAP(()=>{
-    //     const tl1 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".mobile",
-    //             start: "top 85%",
-    //             end: "top 75%",
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         }
-    //     })
-    //     tl1.from(".mobile",{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
-    //     const tl2 = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".contact_text",
-    //             start: "top 85%",
-    //             end: "top 75%",
-    //             toggleActions: "play none none none",
-    //             markers: true,
-    //         }
-    //     })
-    //     tl2.from(".contact_text",{
-    //         opacity: 0,
-    //         y: "10vh",
-    //     })
-    // })
+    })
+    // last section
+    useGSAP(()=>{
+        const tl1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".mobile",
+                start: "top 85%",
+                end: "top 75%",
+                toggleActions: "play none none none",
+                markers: true,
+            }
+        })
+        tl1.from(".mobile",{
+            opacity: 0,
+            y: "10vh",
+        })
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".contact_text",
+                start: "top 85%",
+                end: "top 75%",
+                toggleActions: "play none none none",
+                markers: true,
+            }
+        })
+        tl2.from(".contact_text",{
+            opacity: 0,
+            y: "10vh",
+        })
+    })
   return (
     <div className=' bg-black overflow-hidden'>
         {/* Header */}
@@ -405,7 +405,7 @@ function Home() {
             <div className='h-full w-full overflow-hidden absolute'>
                 <img src="/hero-banner.jpg" alt="hero-banner" className="bg-bottom absolute z-0 object-cover object-center overflow-hidden h-[75vh] w-full"/>
             </div>
-            <div className='flex flex-col h-[90%] w-screen mx-auto pt-[50%] justify-center relative z-10'>
+            <div className='flex flex-col h-[90%] md:h-[100%] w-screen md:mx-auto pt-[50%] justify-center relative z-10'>
                 
                 <div className=' box-border pt-[40%] w-fit md:pt-[8%]'>
                     <div className='making'>
