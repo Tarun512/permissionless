@@ -5,8 +5,8 @@ import ParticleButton from "./Pages/ParticleButton";
 function App() {
   return (
     <div className="bg-black  ">
-      <PleaseDont />
-      {/* <Home/> */}
+      {/* <PleaseDont /> */}
+      <Home/>
       {/* <Loading/> */}
       {/* <ParticleButton/> */}
     </div>
