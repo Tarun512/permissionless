@@ -381,42 +381,42 @@ function Home() {
   return (
     <div className=' bg-black overflow-hidden'>
         {/* Header */}
-        {/* <div className={`${scroll ? "visible" : "hidden"} fixed py-2 bg-opacity-1 w-full`}>
+        <div className={`${scroll ? "visible" : "hidden"} fixed top-0 left-0 py-2 bg-opacity-1 w-full z-[60]`}>
             <div className='px-2 mx-20'>
-                <div className='h-16 flex flex-row items-center justify-between '>
-                    <a href='google.com' >
-                        <img src="/logo-svg.svg" alt="logo-svg" className='hidden sm:block'/>
-                    </a>
-                    <div>
-                        <img src="/permissionless_logo.svg" alt="permissionless logo" />
-                    </div>
-                    
-                    <div></div>
+                <div className='h-16 flex flex-row items-center justify-between'>
+                <a href='google.com'>
+                    <img src="/logo-svg.svg" alt="logo-svg" className='hidden sm:block'/>
+                </a>
+                <div>
+                    <img src="/permissionless_logo.svg" alt="permissionless logo" />
+                </div>
+                <div></div>
                 </div>
             </div>
-        </div> */}
+            </div>
+
 
         {/* Hero section */}
         
         <section
             className=" h-[100vh] w-[100vw] overflow-hidden first"
         >   
-        <div className='h-[75vh] box-border '>
+        <div className='h-[75vh] w-screen box-border '>
             <div className='h-full w-full overflow-hidden absolute'>
                 <img src="/hero-banner.jpg" alt="hero-banner" className="bg-bottom absolute z-0 object-cover object-center overflow-hidden h-[75vh] w-full"/>
             </div>
-            <div className='flex flex-col h-[90%] md:h-[100%] w-screen md:mx-auto pt-[50%] justify-center relative z-10'>
+            <div className='flex flex-col  h-[90%] w-screen md:w-[50%] mx-auto pt-[50%] md:pt-[25%] justify-center relative z-10'>
                 
-                <div className=' box-border pt-[40%] w-fit md:pt-[8%]'>
+                <div className=' box-border pt-[40%] w-fit md:w-[80%] mx-auto md:pt-[8%]'>
                     <div className='making'>
-                        <img src="/making.webp" alt="making" className='h-20 px-[25%] '/>
+                        <img src="/making.webp" alt="making" className='h-20 px-[25%] md:mx-auto'/>
                     </div>
                     <div className='px-4'>
                         <img src="/opportunities.webp" alt="opportunities" className='making h-20 block'/>
                     </div>
-                    <img src="/permissionless_logo.svg" alt="permissionless_logo" className='opportunities box-border ml-8 mr-4 w-[80%] md:h-25 md:w-full md:px-3 my-[-4%]'/> 
+                    <img src="/permissionless_logo.svg" alt="permissionless_logo" className='opportunities box-border ml-8 mr-4 w-[80%] md:h-25 md:w-full md:px-3 md:mb-1 my-[-4%]'/> 
                 </div>
-                <div className='w-2/4 mx-auto pt-2 relative z-30 bg-bottom mt-[10%]'>
+                <div className='w-[50%] mx-auto pt-2 relative z-30 flex justify-center bg-bottom mt-[10%]'>
                         <img src="/image(1).webp" alt="splash" className='absolute z-0 logo'/>
                         <img src="/image(2).webp" alt="drop" className='z-10 drop'/>
                 </div>
@@ -427,10 +427,10 @@ function Home() {
         {/* Dnt mint */}
         <section className='bg-black relative h-[70vh] w-[100vw] z-0 second'>
             <div className='bg-custom_green absolute h-[80%] w-full bottom-0 z-10'>
-                <div className=' mt-0 pt-0'>
-                    <img src="/bg-line-3.svg" alt="bg-lines-2 " className='absolute z-20 h-[100%] w-[100%] object-cover object-[30%_center] pb-[30%] md:w-[50%] md:ml-[30%] md:mr-[20%]'/>
+                <div className='md:h-[35vh] md:w-[60%] mt-0 pt-0 md:z-39'>
+                    <img src="/bg-line-3.svg" alt="bg-lines-2 " className='absolute z-20 md:z-35 h-[100%] w-[100%] object-cover object-[30%_center] md:object-fill pb-[30%] md:pb-[10%] md:w-[50%] md:ml-[30%] md:mr-[20%]'/>
                 </div>
-                <div className='flex flex-col md:flex-row justify-between items-center absolute z-30 md:h-1/5 w-[80%] mx-[10%] bottom-0 md:my-[15%] text'>
+                <div className='flex flex-col md:flex-row justify-between items-center absolute z-30 md:h-1/5 w-[80%] mx-[10%] bottom-0 md:mb-[10%] text'>
                     <h2 className='mt-[70%] md:my-[30%] ml-[5%]'>
                         <span className='text-black font-bold text-3xl'>Advancing Humanity,</span><br />
                         <span className='text-black font-bold text-3xl flex justify-center'>Almost a State.</span>
@@ -450,31 +450,43 @@ function Home() {
         </section>
 
         {/* WHO ARE WE */}
-        <section className='bg-black relative third'>
-            <div className='flex flex-col md:flex-row my-24 justify-center mb-0'>
-                <div className='h-full md:w-[60%] team_image relative z-50'>
-                    <img src="/team01.webp" alt="team image" />
+        <section className='relative w-full bg-black mb-8 flex flex-col justify-between overflow-hidden third'>
+            <div className='flex flex-col md:flex-row justify-between my-24 mb-0'>
+                <div className='w-full md:w-[60%] flex-grow team_image relative z-50'>
+                    <img src="/team01.webp" alt="team image" className="w-full h-auto object-cover" />
                 </div>
-                <div className='flex flex-col md:w-[40%] h-full w-full justify-between'>
-                    <div className='w-full  relative h-full div1  z-40'>
-                        <div className='w-full h-[18vw] md:h-[8vw] z-20 text-nowrap bg-custom_green absolute div1_paint'></div>
-                        <h2 className='relative text-white  text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
+                <div className='flex flex-col md:w-[40%] w-full justify-between mb-4 gap-4'>
+                    <div className='w-full relative h-auto mb-4 div1 z-40'>
+                        <h2 className='relative text-white text-left w-full font-bold italic text-nowrap text-[15vw] md:text-[3rem] lg:text-[4rem]'>
+                            WHO ARE WE
+                        </h2>
                     </div>
-                    <div className='w-full  relative h-full div2'>
+                    <div className='w-full relative h-auto mb-4 div2'>
                         <div className='w-full h-[18vw] md:h-[8vw] z-20 text-nowrap bg-custom_green absolute div2_paint'></div>
-                        <h2 className='text-white text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
+                        <h2 className='text-white text-left w-full font-bold italic text-nowrap text-[15vw] md:text-[3rem] lg:text-[4rem]'>
+                            WHO ARE WE
+                        </h2>
                     </div>
-                    <div className='w-full  relative h-full div3'>
+                    <div className='w-full relative h-auto mb-4 div3'>
                         <div className='w-full h-[18vw] md:h-[8vw] z-20 text-nowrap bg-custom_green absolute div3_paint'></div>
-                        <h2 className='text-white text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
+                        <h2 className='text-white text-left w-full font-bold italic text-nowrap text-[15vw] md:text-[3rem] lg:text-[4rem]'>
+                            WHO ARE WE
+                        </h2>
                     </div>
-                    <div className='w-full relative  div4'>
+                    <div className='w-full relative h-auto mb-4 div4'>
                         <div className='w-full h-[18vw] md:h-[8vw] z-20 text-nowrap bg-custom_green absolute div4_paint'></div>
-                        <h2 className='text-white text-left w-full font-bold italic text-[15vw] md:text-[6vw]'>WHO ARE WE</h2>
+                        <h2 className='text-white text-left w-full font-bold italic text-nowrap text-[15vw] md:text-[3rem] lg:text-[4rem]'>
+                            WHO ARE WE
+                        </h2>
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col md:flex-row justify-between items-start md:my-[2vw] first_para'>
+        </section>
+
+
+        {/* paragraphs */}
+        <section className='relative h-auto mt-8 w-[100vw] overflow-hidden flex-col flex-grow md:flex-row'>
+            <div className='h-auto flex flex-col md:flex-row justify-between  relative items-start md:my-[2vw] first_para'>
                 <div>
                     <h2 className='text-gray-700 md:text-[1.5vw] text-nowrap my-2'>We are everywhere</h2>
                 </div>
@@ -489,7 +501,7 @@ function Home() {
                 </div>
 
             </div>
-            <div className='flex flex-col w-full md:flex-row md:w-[80%] md:mx-[10%] my-[1.5vw] md:justify-evenly second_para'>
+            <div className='h-auto flex flex-col w-full md:flex-row md:w-[80%] relative md:mx-[10%] my-[1.5vw] md:justify-evenly second_para'>
                 <p className='text-gray-400 text-left md:w-1/2'>
                     Permissionless is committed to build public infrastructure for the new web. We advocate technology as a medium for solving the most complex problems of mankind. Annoyed that instead of using this to enable various efficient trustless systems with open access, profit making become the main focus. We would like to change that, now.
                 </p>
@@ -500,15 +512,15 @@ function Home() {
             <h2 className="text-white">heleo world</h2>
         </section>
         {/* our work */}
-        <section className='relative bg-black  md:h-[160vh] w-[100%]'>
-            <div className='relative z-0 h-[20vh] w-[100vw]  doing'>
+        <section className='relative h-auto bg-black mt-4 pt-4 md:h-[160vh] w-[100%]'>
+            <div className='relative z-0 h-[40vh] md:h-[20vh] w-[100vw] doing'>
                 <picture>
                     <source srcset="/what-are-we-doing.svg" media="(min-width: 768px)"/>
-                    <img src="/what-are-we-doing-mobile.svg" alt="what-are-we-doing" className='w-full'/>
+                    <img src="/what-are-we-doing-mobile.svg" alt="what-are-we-doing" className='w-full object-fit'/>
                 </picture>
             </div>
             {/* Spaceship */}
-            <div className={`md:${spaceHover? "bg-[url('/house-colored.jpg')]" : "bg-[url('/house.jpg')]"} bg-[url('/house-colored.jpg')]  h-[60vh] bg-center bg-cover md:h-[80vh] w-[90vw] md:w-[70vw] mx-[4vw] md:mx-[12vw] mt-[-5vh] md:mt-[-10vh] relative z-20 space`} onMouseEnter={()=>handleSpaceHoverEnter()} onMouseLeave={()=>handleSpaceHoverLeave()}>
+            <div className={`md:${spaceHover? "bg-[url('/house-colored.jpg')]" : "bg-[url('/house.jpg')]"} bg-[url('/house-colored.jpg')]  h-[60vh] bg-center bg-cover md:h-[80vh] w-[90vw] lg:w-[80vw] mx-[4vw] lg:mx-auto  mt-[-3vh] md:mt-[-10vh] relative z-20 space`} onMouseEnter={()=>handleSpaceHoverEnter()} onMouseLeave={()=>handleSpaceHoverLeave()}>
                 <div className='flex flex-col justify-between h-full mx-5 my-5'>
                     <div>
                         <h2 className={`md:${spaceHover? "text-purple-500":"text-gray-400"} text-purple-500 text-[8vh] `}>Spaceship</h2>
@@ -521,11 +533,11 @@ function Home() {
                 </div>
             </div>
             {/* our work product */}
-            <div className='flex flex-col  md:flex-row justify-between h-[120vh] w-[190vw] md:w-[70vw] my-[5vh] mx-[4vw] md:mx-[12vw] sites '>
-                <div className="h-[60vh] md:h-[60vh] w-[92vw] md:w-[35vw] box-border bg-custom_green border-2 border-custom_green flex items-center relative md:mr-[3vh]" onMouseEnter={()=>handleSpaceHoverEnter()} onMouseLeave={()=>handleSpaceHoverLeave}>
+            <div className='flex flex-col  md:flex-row justify-between h-auto w-[100vw] md:w-[90vw] lg:w-[80vw] my-[5vh] mx-[4vw] md:mx-[5vw] lg:mx-[10vw] sites '>
+                <div className="h-[60vh] md:h-[60vh] w-[92vw] md:w-[40vw] box-border bg-custom_green border-2 border-custom_green flex items-center relative md:mr-[1vh] lg:mr-[3vh] mt-[2vh] overflow-hidden" onMouseEnter={()=>handleSpaceHoverEnter()} onMouseLeave={()=>handleSpaceHoverLeave}>
                     <div className="h-[26vh] w-full my-auto bg-no-repeat bg-center bg-[url('/product-bg.svg')] absolute z-10"></div>
                     <div className="flex flex-row h-[55vh] w-[80vw] md:w-[25vw] justify-end md:justify-center items-center ml-[20vw] md:mx-auto relative z-10 ">
-                        <img src="/image(3).webp" alt="" className={`md:${spaceHover? "h-[55vh] md:h-[40vh] w-[40vh]":"h-[35vh] w-[30vh] md:h-[20vh] md:w-[20vh]"} md:mx-auto md:my-auto`}/>
+                        <img src="/image(3).webp" alt="" className={`md:${spaceHover? "h-[40vh] md:h-[40vh] w-[40vh]":"h-[35vh] w-[35vh] md:h-[20vh] md:w-[20vh]"} md:mx-auto md:my-auto`}/>
                     </div>
                     <div className={`h-[50vh] md:h-[60vh] w-full md:w-[30vw] absolute z-20 flex flex-col justify-between ml-[6vw] md:mx-5 `}>
                         <div>
@@ -542,7 +554,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="h-[60vh] md:h-[60vh] w-[92vw] md:w-[35vw] bg-custom_green border-2 border-custom_green flex items-center relative md:mr-[3vh] mt-[2vh]" onMouseEnter={()=>handleSpaceHoverEnter()} onMouseLeave={()=>handleSpaceHoverLeave}>
+                <div className="h-[60vh] md:h-[60vh] w-[92vw] md:w-[40vw] bg-custom_green border-2 border-custom_green flex items-center relative md:ml-[1vh] lg:ml-[3vh] mt-[2vh] overflow-hidden" onMouseEnter={()=>handleSpaceHoverEnter()} onMouseLeave={()=>handleSpaceHoverLeave}>
                     <div className="h-[26vh] w-full my-auto bg-no-repeat bg-center bg-[url('/product-bg.svg')] absolute z-10"></div>
                     <div className="flex flex-row h-[55vh] w-[80vw] md:w-[25vw] justify-end md:justify-center items-center ml-[20vw] md:mx-auto relative z-10 ">
                         <img src="/image(3).webp" alt="" className={`md:${spaceHover? "h-[55vh] md:h-[40vh] w-[40vh]":"h-[35vh] w-[30vh] md:h-[20vh] md:w-[20vh]"} md:mx-auto md:my-auto`}/>
@@ -566,18 +578,18 @@ function Home() {
             </div>
         </section>
         {/* Sociai network section */}
-        <section className='relative h-[110vh] md:h-[80vh] w-[100vw] bg-black mt-10'>
-            <div className='flex md:flex-row flex-col h-[120vh] md:h-[80vh]  md:w-[70vw] mx-auto jacket'>
-                <div className='h-[50vh] md:h-[60vh] md:w-[30vw] md:mr-[5vw] relative z-0'>
-                    <div className="h-[60vh] w-[100vw] md:w-[30vw] mx-auto absolute z-0 flex items-center">
-                        <img src="bg-lines-2.png" alt=""  className="my-auto"/>
+        <section className='relative  md:h-[80vh] w-[100vw] bg-black mt-10'>
+            <div className='flex md:flex-row flex-col h-auto md:h-[80vh]  md:w-[80%] mx-auto jacket'>
+                <div className='h-[60vh] md:h-[60vh] mb-[4vw] md:w-[50%] md:mr-[2vw] relative z-0 md:overflow-hidden'>
+                    <div className="h-[60vh] w-[100vw] md:w-[100%] mx-auto absolute z-0 flex items-center overflow-hidden">
+                        <img src="bg-lines-2.png" alt=""  className="my-auto "/>
                     </div>
-                    <div className='h-[50vh] md:h-[60vh] w-[80vw] md:w-[30vw] absolute z-10 flex justify-center mx-[10vw]'>
+                    <div className='h-[50vh] md:h-[60vh] w-[80vw] md:w-[100%] absolute z-10 flex md:flex-row justify-center md:mx-auto mx-[10vw]'>
                         <img src="/image(4).webp" alt="jacket" />
                     </div>
-                    <div className='h-[10vh] md:h-[20vh] w-[100vw] md:w-[30vw] my-[20vh] absolute z-20 text-white text-6xl md:text-[9vh] flex items-center '>
+                    <div className='h-[10vh] md:h-[20vh] w-[100vw] md:w-[100%] my-[20vh] absolute z-20 text-white text-6xl md:text-5xl flex justify-center items-center '>
                         <div className="relative flex items-center">
-                            <div className='w-[35vw] md:w-full h-[20vh] md:h-full my-auto absolute'>
+                            <div className='w-[35vw] md:w-[100%] h-[20vh] md:h-full md:py-[10vh] my-auto absolute'>
                             <img
                                 src="/paint-brush-2.png"
                                 alt="highlight"
@@ -594,31 +606,31 @@ function Home() {
                     
                     
                 </div>
-                <div className='h-[60vh] md:w-[30vw] flex flex-col mx-auto'>
+                <div className='h-auto md:w-[50%] flex flex-col mx-auto mb-[5vh]'>
                     {/* DISCORD */}
                         <div className='flex flex-row items-center h-[10vh] w-full group social'>
                             <img src="/discord.png" alt="discord logo" className='h-12 w-12 md:grayscale group-hover:grayscale-0 transition duration-300'/>
-                            <h2 className='text-blue-500 text-4xl md:text-[8vh] ml-4 italic bg-clip-text md:group-hover:text-transparent md:group-hover:text-blue-500 transition duration-300'>DISCORD</h2>
+                            <h2 className='text-discordBlue discordBlue md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text md:group-hover:text-transparent md:group-hover:text-discordBlue transition duration-300'>DISCORD</h2>
                         </div>
                         {/* INSTAGRAM */}
                         <div className='flex flex-row items-center h-[10vh] w-full group social'>
                             <img src="/instagram.png" alt="discord logo" className='h-12 w-12 md:grayscale group-hover:grayscale-0 transition duration-300'/>
-                            <h2 className='text-4xl md:text-[8vh] ml-4 italic bg-gradient-to-r from-purple-900 via-pink-700 to-red-900 text-transparent bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:via-pink-500 group-hover:to-red-700 transition duration-300'>INSTAGRAM</h2>
+                            <h2 className='text-transparent text-4xl md:text-[8vh] ml-4 italic md:group-hover:text-transparent bg-gradient-to-r from-purple-900 via-pink-700 to-red-900  bg-clip-text md:group-hover:bg-gradient-to-r md:group-hover:from-purple-600 md:group-hover:via-pink-500 md:group-hover:to-red-700 md:text-gray-400 transition duration-300 leading-none'>INSTAGRAM</h2>
                         </div>
                         {/* YOUTUBE */}
                         <div className='flex flex-row items-center h-[10vh] w-full group social'>
                             <img src="/youtube-new.png" alt="discord logo" className='h-12 w-12 md:grayscale group-hover:grayscale-0 transition duration-300'/>
-                            <h2 className='text-red-600 md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text group-hover:text-transparent md:group-hover:text-red-700 transition duration-300'>YOUTUBE</h2>
+                            <h2 className='text-red-600 md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text md:group-hover:text-transparent md:group-hover:text-red-700 transition duration-300'>YOUTUBE</h2>
                         </div>
                         {/* TWITTER */}
                         <div className='flex flex-row items-center h-[10vh] w-full group social'>
                             <img src="/twitter.png" alt="discord logo" className='h-12 w-12 md:grayscale group-hover:grayscale-0 transition duration-300'/>
-                            <h2 className='text-blue-400 md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text group-hover:text-transparent md:group-hover:text-blue-500 transition duration-300'>TWITTER</h2>
+                            <h2 className='text-blue-400 md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text md:group-hover:text-transparent md:group-hover:text-blue-500 transition duration-300'>TWITTER</h2>
                         </div>
                         {/* LINKEDIN */}
                         <div className='flex flex-row items-center h-[10vh] w-full group social'>
                             <img src="/linkedin.png" alt="discord logo" className='h-12 w-12 md:grayscale group-hover:grayscale-0 transition duration-300'/>
-                            <h2 className='text-blue-600 md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text group-hover:text-transparent group-hover:text-blue-500 transition duration-300'>LINKEDIN</h2>
+                            <h2 className='text-blue-400 md:text-gray-400 text-4xl md:text-[8vh] ml-4 italic bg-clip-text md:group-hover:text-transparent md:group-hover:text-blue-500 transition duration-300'>LINKEDIN</h2>
                         </div>
 
                 </div>
@@ -634,7 +646,7 @@ function Home() {
                     <img src="/bg-lines-2.svg" alt="bg-lines-2" />      
                 </div>
                 
-                <div className="h-[60vh] md:h-[90vh] w-[50vw] md:w-[20vw] flex justify-center items-center mx-auto absolute z-20 mobile">
+                <div className="max-h-[90vh] md:h-[90vh] w-[50vw] md:w-[20vw] flex justify-center items-center mx-auto absolute z-20 mobile">
                     <img src="/mobile.png" alt=""  className='h-full w-full'/>
                 </div>
                 <div className='w-full h-[20vh] mt-[15vh] absolute z-30 contact_text'>
@@ -644,8 +656,8 @@ function Home() {
             
         </section>
         {/* footer */}
-        <section className="bg-gray-700 bg-opacity-8 h-[10vh] w-[100vw] pt-[0vh] md:pt-[30vh] pb-[15vh] md:pb-[20vh]">
-            <div className='h-[10vh] w-full flex flex-col md:flex-row justify-around items-center relative z-20 pb-5'>
+        <section className="bg-gray-700 bg-opacity-8 h- w-[100vw] pt-[10vh] md:pt-[20vh] pb-[20vh] md:pb-[15vh]">
+            <div className='h- w-full flex flex-col md:flex-row justify-around items-center relative z-20 pb-5'>
                 <div className='text-white text-[2vh] hidden md:block'>
                     <a href="doanything.ai" className='hover:text-blue-500'>Doanything.ai </a>
                     <a href="dsync.ai" className='hover:text-blue-500'> Dsync.ai</a>

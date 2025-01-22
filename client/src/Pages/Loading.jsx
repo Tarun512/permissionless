@@ -30,13 +30,22 @@ function Loading() {
   useGSAP(() => {
     const spans = document.querySelectorAll('.wave-text span');
     
-    gsap.to(spans, {
-      y: "6vh",
-      yoyo: true,
-      ease: 'slow(0.7,0.7,false)',
-      stagger: 0.1,
-      duration: 2.5,
-    });
+    gsap.fromTo(
+      spans,
+      {
+        y: "-4vh", // Initial position below the line
+        opacity: 0, // Start fully transparent
+      },
+      {
+        y: "0", // Move to the original position
+        opacity: 1, // Fade in
+        duration: 1, // Animation duration
+        ease: "power1.out", // Smooth easing
+        stagger: 0.1, // Delay between animations for wave effect
+      }
+    );
+    
+    
   }, []);
   return (
     <>
@@ -50,19 +59,19 @@ function Loading() {
           {/* <span>Now you're officically</span>
           <img src="./permissionless_logo_brown.svg" alt="permissionless" /> */}
           
-          <div className="wave-text flex relative items-center my-[50vh]">
+          <div className="w-[90%] md:w-[50%] mx-auto wave-text flex flex-wrap justify-center relative items-center my-[50vh]">
             <span className='inline-block pl-1'>Congratulations, </span>
             <span className='inline-block pl-1'>now</span>
             <span className='inline-block pl-1'>you're</span>
             <span className='inline-block pl-1'>officially</span>
-            <span className='inline-block pl-1'>
+            <span className='md:inline-block w-full md:w-auto md:pl-1 flex justify-center md:justify-start'>
               <img src="./permissionless_logo_brown.svg" alt="permissionless" />
             </span>
           </div>
         
         </div>
         
-        <div className='relative z-10 h-[15vh] w-screen text-blue-600 flex flex-row justify-end text-[10vh]'>{count}%</div>
+        <div className='relative z-10 h-[15vh] w-screen text-blue-600 flex flex-row justify-center md:justify-end text-[10vh]'>{count}%</div>
 
       </div>
     }
